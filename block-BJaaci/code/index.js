@@ -142,8 +142,8 @@ Use the variable named movies to solve the requirement below.
 //   }
 // }
 // 30. Log the name of all the movies with year `2018`
-for (let movie of movies) {
-  if (movie.year == `2018`) {
-    console.log(movie.title)
-  }
-}
+// for (let movie of movies) {
+//   if (movie.year == `2018`) {
+//     console.log(movie.title)
+//   }
+// }
