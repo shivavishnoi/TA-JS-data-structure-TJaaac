@@ -48,8 +48,13 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
+function revert(arr) {
   // your code
+  let revArr = []
+  for (let i = arr.length - 1; i >= 0; i--) {
+    revArr.push(arr[i])
+  }
+  return revArr
 }
 
 // Uncomment the code below and test the output
@@ -70,11 +75,16 @@ function revert() {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
-  // your code
-}
+// function clear(arr) {
+//   let newArr = []
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//     if () {
+//       newArr.push(arr[i])
+//     }
+//   } return newArr
+// }
 
-// Uncomment the code below and test the output
+// // Uncomment the code below and test the output
 // console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
 // console.log(clear(['a', undefined, 'd', 0, 'c', 'b'])); // ['b', 'c', 'd', 'a']
 // console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
@@ -93,11 +103,15 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
+function arrayToObj(arr) {
   // your code
+  let  obj = {}
+  for(let i=0;i<=arr.length - 1; i++){
+     obj[`${i}`] = arr[i]
+  }return obj
 }
 
 // Uncomment the code below and test the output
-// console.log(arrayToObj([1, 2, 3, 4])); // {0: 1, 1: 2, 2: 3, 3: 4}
-// console.log(arrayToObj(['a', undefined, 'd'])); // {0: 'a', 1: undefined, 2: 'd'}
-// console.log(arrayToObj(['Ryan', 'John'])); // {0: 'Ryan', 1: 'John'}
+console.log(arrayToObj([1, 2, 3, 4])); // {0: 1, 1: 2, 2: 3, 3: 4}
+console.log(arrayToObj(['a', undefined, 'd'])); // {0: 'a', 1: undefined, 2: 'd'}
+console.log(arrayToObj(['Ryan', 'John'])); // {0: 'Ryan', 1: 'John'}
