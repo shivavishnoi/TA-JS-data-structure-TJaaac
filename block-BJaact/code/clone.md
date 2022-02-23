@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output  arya
+console.log(person.firstName); // output   arya
+console.log(person.lastName); // output doe
+console.log(person == person2); // output true
+console.log(person === person2); // output true
+console.log(person.lastName === person2.lastName); // output true
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output arya
+console.log(person.firstName); // output arya
+console.log(personTwo.lastName); // output doe
+console.log(person.firstName === personTwo.firstName); // output true
+console.log(person == personTwo); // output false
+console.log(person === personTwo); // output false
+console.log(person.address === personTwo.address); // output false
+console.log(person.address == personTwo.address); // output false
+console.log(personTwo.address.city); // output navada
+console.log(person.address.city); // output navada
+console.log(person.address.city == personTwo.address.city); // output true
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output  arya
+console.log(person.firstName); // output arya
+console.log(personTwo.lastName); // output doe
+console.log(person.firstName === personTwo.firstName); // output true
+console.log(person == personTwo); // output false
+console.log(person === personTwo); // output false
+console.log(person.address === personTwo.address); // output false
+console.log(person.address == personTwo.address); // output false
+console.log(personTwo.address.city); // output san jose
+console.log(person.address.city); // output navada
+console.log(person.address.city == personTwo.address.city); // output false
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -104,6 +104,8 @@ let blogs = [
 ];
 
 // Your code goes here
+let clonedblogs = [...blogs]
+clonedblogs = [{...blogs[0]}, {...blogs[1]}, {...blogs[1]}]
 ```
 
 5. Clone the `question` variable into a new variable named `questionClone`
@@ -129,6 +131,7 @@ var questions = [
 ];
 
 // Your code goes here
+let questionClone = [...questions]
 ```
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
@@ -156,6 +159,7 @@ var allBlogs = {
 };
 
 // Your code goes here
+let allBlogsClone = [...allBlogs, authour : {...allBlogs.author}]
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
