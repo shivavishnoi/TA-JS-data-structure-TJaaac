@@ -41,7 +41,7 @@ function times() {
 
   @param arr (array)
   @return array
-
+// add
   Example: 
     revert([1, 2, 3, 4]); // [4, 3, 2, 1]
     revert(['a', 'd', 'c', 'b']); // ['b', 'c', 'd', 'a']
