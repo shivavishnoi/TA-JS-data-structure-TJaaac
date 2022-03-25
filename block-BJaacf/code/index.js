@@ -1,5 +1,5 @@
 // // 1. Create an array named numbers and store 5 number values in it
-let numbers = [1,2,15,0,3,4,5]
+let numbers = [1, 2, 15, 0, 3, 4, 5]
 // // 2. Calculate the sum of array items and print it to the console using console.log()
 // let sum = 0
 // for(let number of numbers){
@@ -21,7 +21,7 @@ let numbers = [1,2,15,0,3,4,5]
 // }
 // console.log(highest)
 // // 5. Find the lowest number in the array and print it to the console using console.log()
-// let lowest = numbers[1]
+// let lowest = numbers[0]
 // for (let number of numbers) {
 //   if (number < lowest) {
 //     lowest = number
@@ -51,3 +51,8 @@ for (let number of numbers) {
   console.log(number)
 }
 // // 10. Find all the number in the array that is divisible by 3
+for (let number of numbers) {
+  if (number % 3 == 0) {
+    console.log(number)
+  }
+}
