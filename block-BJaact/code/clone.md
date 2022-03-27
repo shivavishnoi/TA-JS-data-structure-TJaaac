@@ -32,22 +32,22 @@ let person = {
   },
 };
 
-let personTwo = { ...person };
+let personTwo = { ...person }; //different address
 
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output arya
+console.log(personTwo.firstName); // output John
 console.log(person.firstName); // output arya
 console.log(personTwo.lastName); // output doe
-console.log(person.firstName === personTwo.firstName); // output true
+console.log(person.firstName === personTwo.firstName); // output false
 console.log(person == personTwo); // output false
 console.log(person === personTwo); // output false
-console.log(person.address === personTwo.address); // output false
-console.log(person.address == personTwo.address); // output false
-console.log(personTwo.address.city); // output navada
+console.log(person.address === personTwo.address); // output true
+console.log(person.address == personTwo.address); // output true
+console.log(personTwo.address.city); // output san jose
 console.log(person.address.city); // output navada
-console.log(person.address.city == personTwo.address.city); // output true
+console.log(person.address.city == personTwo.address.city); // output false
 ```
 
 3. Write the output with reason:
@@ -67,12 +67,12 @@ let person = {
 let personTwo = { ...person, address: { ...person.address } };
 
 person.firstName = 'Arya';
-person.city = 'Navada';
+person.address.city = 'Navada';
 
-console.log(personTwo.firstName); // output  arya
+console.log(personTwo.firstName); // output  john
 console.log(person.firstName); // output arya
 console.log(personTwo.lastName); // output doe
-console.log(person.firstName === personTwo.firstName); // output true
+console.log(person.firstName === personTwo.firstName); // output false
 console.log(person == personTwo); // output false
 console.log(person === personTwo); // output false
 console.log(person.address === personTwo.address); // output false
@@ -159,7 +159,7 @@ var allBlogs = {
 };
 
 // Your code goes here
-let allBlogsClone = [...allBlogs, authour : {...allBlogs.author}]
+let allBlogsClone = {...allBlogs, authour : {...allBlogs.author}, comments: [...allBlogs.comments]}
 ```
 
 7. Clone the `person` variable into a new variable named `clonedPerson`
@@ -193,13 +193,15 @@ let person = [
 ];
 
 // Your code goes here
+let clonedPerson = [...person]
+let clonedPerson = [{...person[0]},{...person[1]},{...person[2]},{...person[3], input: {...person[3].input}, output:{...person[3].output}}]
 ```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(object) {
+  return {...object}
 }
 
 // Run the test below to check your function
@@ -222,7 +224,7 @@ let person = {
   },
 };
 
-let clonedPerson = cloneObject(user);
+let clonedPerson = cloneObject(person);
 
 console.log(
   `The user object is ${
